@@ -46,10 +46,10 @@
 
         numbers {
             bindings = <
-&trans  &trans  &trans  &trans  &kp BACKSPACE   &trans    &trans        &kp N7   &kp N8     &kp N9  &trans        &trans
-&trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &trans    &kp LS(LPAR)  &kp N4   &kp N5     &kp N6  &kp LS(RPAR)  &trans
-&trans  &trans  &trans  &trans  &trans          &trans    &trans        &kp N1   &kp N2     &kp N3  &trans        &trans
-                        &trans  &trans          &trans    &kp N0        &kp DOT  &kp COMMA
+&trans  &trans  &trans  &trans  &kp SPACE             &trans    &trans    &kp N7   &kp N8     &kp N9  &trans    &trans
+&trans  &trans  &trans  &trans  &mt LEFT_SHIFT SPACE  &trans    &kp LPAR  &kp N4   &kp N5     &kp N6  &kp RPAR  &trans
+&trans  &trans  &trans  &trans  &trans                &trans    &trans    &kp N1   &kp N2     &kp N3  &trans    &trans
+                        &trans  &trans                &trans    &kp N0    &kp DOT  &kp COMMA
             >;
         };
 
@@ -73,10 +73,10 @@
 
         symbols {
             bindings = <
-&trans  &trans  &kp LS(AT)     &kp EXCL       &kp LS(DQT)  &kp LBKT        &kp RBKT      &kp LS(AMPS)  &kp LS(STAR)   &kp LS(TILDE)  &trans  &trans
-&trans  &trans  &kp LS(POUND)  &kp QMARK      &kp SQT      &kp LS(LPAR)    &kp LS(RPAR)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &trans  &trans
-&trans  &trans  &kp SLASH      &kp LS(COLON)  &kp GRAVE    &kp LS(LBRC)    &kp LS(RBRC)  &kp LS(LT)    &kp EQUAL      &kp LS(GT)     &trans  &trans
-                               &trans         &trans       &kp RET         &trans        &trans        &trans
+&trans  &trans  &kp AT     &kp EXCL   &kp DQT    &kp LBKT    &kp RBKT  &kp AMPS  &kp ASTRK  &kp TILDE  &trans  &trans
+&trans  &trans  &kp HASH   &kp QMARK  &kp SQT    &kp LPAR    &kp RPAR  &kp DLLR  &kp PRCNT  &kp CARET  &trans  &trans
+&trans  &trans  &kp SLASH  &kp COLON  &kp GRAVE  &kp LBRC    &kp RBRC  &kp LT    &kp EQUAL  &kp GT     &trans  &trans
+                           &trans     &trans     &kp RET     &trans    &trans    &trans
             >;
         };
     };
