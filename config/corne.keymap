@@ -8,6 +8,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&lt { tapping-term-ms = <220>; };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -50,9 +52,10 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <220>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 36 37 38>;
+            quick-tap-ms = <0>;
         };
 
         hmrs: hmrs {
@@ -65,6 +68,7 @@
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 3 39 40 41>;
             hold-trigger-on-release;
+            quick-tap-ms = <0>;
         };
     };
 
