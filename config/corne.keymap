@@ -125,8 +125,8 @@
             bindings = <
 &lt 3 TAB     &kp Q            &kp W            &num 2 E      &kp R               &kp T          &kp Y        &kp U                &num 2 I      &kp O            &kp P               &kp BSPC
 &lt 4 ESCAPE  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LCTRL D  &hmls LEFT_SHIFT F  &kp G          &kp H        &hmrs RIGHT_SHIFT J  &hmr LCTRL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SEMI  &kp SQT
-&sk LSHFT     &kp Z            &kp X            &kp C         &kp V               &kp B          &kp N        &kp M                &kp COMMA     &kp DOT          &kp FSLH            &kp ESC
-                                                &trans        &lt 2 ENTER         &lt 1 SPACE    &lt 5 SPACE  &caps_word           &kp RALT
+&sk LSHFT     &kp Z            &kp X            &kp C         &kp V               &kp B          &kp N        &kp M                &kp COMMA     &kp DOT          &kp FSLH            &kp MINUS
+                                                &kp MINUS     &lt 2 ENTER         &lt 1 SPACE    &lt 5 SPACE  &caps_word           &kp RALT
             >;
         };
 
