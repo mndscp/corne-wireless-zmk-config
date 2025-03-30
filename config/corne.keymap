@@ -38,6 +38,26 @@
             bindings = <&cpya>;
             key-positions = <25 28>;
         };
+
+        smiley1 {
+            bindings = <&smiley1>;
+            key-positions = <2 3>;
+        };
+
+        smiley2 {
+            bindings = <&smiley2>;
+            key-positions = <2 4>;
+        };
+
+        smiley3 {
+            bindings = <&smiley3>;
+            key-positions = <2 5>;
+        };
+
+        smiley4 {
+            bindings = <&smiley4>;
+            key-positions = <1 5>;
+        };
     };
 
     behaviors {
@@ -110,6 +130,34 @@
             bindings = <&kp LC(A) &kp LC(C)>;
             label = "CPYA";
         };
+
+        smiley1: smiley1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp RPAR>;
+            label = "SMILEY1";
+        };
+
+        smiley2: smiley2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp SPACE &kp LS(D)>;
+            label = "SMILEY2";
+        };
+
+        smiley3: smiley3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp SPACE &kp LS(D) &kp LS(D) &kp LS(D)>;
+            label = "SMILEY3";
+        };
+
+        smiley4: smiley4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp UNDER &kp CARET>;
+            label = "SMILEY4";
+        };
     };
 
     keymap {
@@ -125,8 +173,8 @@
             bindings = <
 &lt 3 TAB     &kp Q            &kp W            &num 2 E      &kp R               &kp T          &kp Y        &kp U                &num 2 I      &kp O            &kp P               &kp BSPC
 &lt 4 ESCAPE  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LCTRL D  &hmls LEFT_SHIFT F  &kp G          &kp H        &hmrs RIGHT_SHIFT J  &hmr LCTRL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SEMI  &kp SQT
-&sk LSHFT     &kp Z            &kp X            &kp C         &kp V               &kp B          &kp N        &kp M                &kp COMMA     &kp DOT          &kp FSLH            &kp MINUS
-                                                &kp MINUS     &lt 2 ENTER         &lt 1 SPACE    &lt 5 SPACE  &caps_word           &kp RALT
+&sk LSHFT     &kp Z            &kp X            &kp C         &kp V               &kp B          &kp N        &kp M                &kp COMMA     &kp DOT          &kp FSLH            &kp ENTER
+                                                &kp MINUS     &lt 2 ENTER         &lt 1 SPACE    &lt 5 SPACE  &caps_word           &kp LANG1
             >;
         };
 
@@ -150,10 +198,10 @@
 
         tab {
             bindings = <
-&none   &kp LA(LC(LG(Q)))  &kp LG(LC(LA(W)))  &kp LG(LC(LA(E)))  &kp LG(LC(LA(R)))  &kp LG(LC(LA(T)))    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(LC(LA(A)))  &kp LG(LC(LA(S)))  &kp LG(LC(LA(D)))  &kp LG(LC(LA(F)))  &kp LG(LC(LA(G)))    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(LC(LA(Z)))  &kp LG(LC(LA(X)))  &kp LG(LC(LA(C)))  &kp LG(LC(LA(V)))  &kp LG(LC(LA(B)))    &trans  &trans  &trans  &trans  &trans  &trans
-                                              &trans             &kp LC(LS(N))      &kp F12              &trans  &trans  &trans
+&none   &kp LA(LC(LG(Q)))  &kp LG(LC(LA(W)))  &kp LG(LC(LA(E)))  &kp LG(LC(LA(R)))  &kp LG(LC(LA(T)))    &kp LG(LC(LA(Y)))  &kp LG(LC(LA(U)))  &kp LG(LC(LA(I)))      &kp LG(LC(LA(O)))    &kp LG(LC(LA(P)))     &trans
+&trans  &kp LG(LC(LA(A)))  &kp LG(LC(LA(S)))  &kp LG(LC(LA(D)))  &kp LG(LC(LA(F)))  &kp LG(LC(LA(G)))    &kp LG(LA(LC(H)))  &kp LG(LC(LA(J)))  &kp LG(LC(LA(K)))      &kp LG(LC(LA(L)))    &kp LG(LC(LA(SEMI)))  &trans
+&trans  &kp LG(LC(LA(Z)))  &kp LG(LC(LA(X)))  &kp LG(LC(LA(C)))  &kp LG(LC(LA(V)))  &kp LG(LC(LA(B)))    &kp LG(LC(LA(N)))  &kp LG(LC(LA(M)))  &kp LG(LC(LA(COMMA)))  &kp LG(LC(LA(DOT)))  &kp LG(LC(LA(FSLH)))  &trans
+                                              &trans             &kp LC(LS(N))      &kp F12              &trans             &trans             &trans
             >;
         };
 
@@ -162,7 +210,7 @@
 &trans  &kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)    &trans  &trans  &trans  &trans  &trans  &trans
 &none   &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)    &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans     &trans     &trans       &trans  &trans  &trans
+                              &trans     &kp LC(B)  &kp LC(H)    &trans  &trans  &trans
             >;
         };
 
