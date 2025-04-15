@@ -164,12 +164,6 @@
         compatible = "zmk,keymap";
 
         base {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
             bindings = <
 &lt 3 TAB     &kp Q            &kp W            &num 2 E      &kp R               &kp T          &kp Y        &kp U                &num 2 I      &kp O            &kp P               &kp BSPC
 &lt 4 ESCAPE  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LCTRL D  &hmls LEFT_SHIFT F  &kp G          &kp H        &hmrs RIGHT_SHIFT J  &hmr LCTRL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SEMI  &kp SQT
